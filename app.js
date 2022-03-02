@@ -5,7 +5,7 @@ var cors = require("cors");
 
 const app = express();
 
-sequelize.sync();
+sequelize.sync({ logging: console.log })
 dotenv.config();
 
 app.use(express.json());

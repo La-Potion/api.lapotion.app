@@ -2,6 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../connexion");
 const Duree = require("./Duree");
 const Type = require("./Type");
+const ModesCartes = require("./ModesCartes");
 
 class Carte extends Model {}
 
@@ -29,5 +30,6 @@ Carte.init(
 
 Carte.belongsTo(Type, { foreignKey: "type_ref" });
 Carte.belongsTo(Duree, { foreignKey: "duree_id" });
+Carte.hasMany(ModesCartes, { foreignKey: 'id' });
 
 module.exports = Carte;
