@@ -30,6 +30,6 @@ Carte.init(
 
 Carte.belongsTo(Type, { foreignKey: "type_ref" });
 Carte.belongsTo(Duree, { foreignKey: "duree_id" });
-Carte.hasMany(ModesCartes, { foreignKey: 'id' });
+Carte.hasMany(ModesCartes, { as: 'carte_id', foreignKey: 'id' });
 
 module.exports = Carte;
