@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../connexion");
-const Carte = require("./Carte");
 const Mode = require("./Mode");
+const Carte = require("./Carte")
 
 class ModeCarte extends Model {}
 
