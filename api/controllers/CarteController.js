@@ -7,6 +7,7 @@ const Mode = require("../../database/models/Mode");
 async function All(req, res) {
   const cartes = await Carte.findAll({
     include: [Duree, Type, ModesCartes, {model: ModesCartes, include: [Mode]}],
+    logging: console.log
   });
   res.json(cartes);
 }
