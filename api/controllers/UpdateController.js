@@ -14,6 +14,12 @@ async function Update(req, res) {
   res.json(cartes);
 }
 
+async function GetAllID(req, res) {
+  const cartes = await Carte.findAll({attributes: ['id']});
+  res.json(cartes);
+}
+
 module.exports = {
   Update,
+  GetAllID
 };
