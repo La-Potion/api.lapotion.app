@@ -1,11 +1,13 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const sequelize = require("./database/connexion");
+const status = require('./api/status')
 var cors = require("cors");
 
 const app = express();
 
 sequelize.sync({ logging: console.log })
+status.sync(app)
 dotenv.config();
 
 app.use(express.json());
