@@ -9,7 +9,7 @@ async function Update(req, res) {
   const request_date = new Date(req.body.last_update);
   const cartes = await Carte.findAll({
     where: { updated_at: { [Op.gte]: request_date } },
-    include: [Duree, Type, ModesCartes, {model: ModesCartes, include: [Mode]}],
+    include: [Duree, Type, ModesCartes, Special, {model: ModesCartes, include: [Mode]}, {model: Special, attributes: ['name']}],
   });
   res.json(cartes);
 }
