@@ -4,6 +4,7 @@ const Duree = require("../../database/models/Duree");
 const Type = require("../../database/models/Type");
 const ModesCartes = require("../../database/models/ModesCartes");
 const Mode = require("../../database/models/Mode");
+const Special = require("../../database/models/Special");
 
 async function Update(req, res) {
   const request_date = new Date(req.body.last_update);
