@@ -1,12 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../connexion");
 const Mode = require("./Mode");
-const Carte = require("./Carte")
 
-class ModeCarte extends Model {}
-
-ModeCarte.init(
-  {
+const ModeCarte = sequelize.define('mode_cartes', {
       id: {
           primaryKey: true,
           type: DataTypes.INTEGER,

@@ -22,6 +22,7 @@ Carte.init(
     type_ref: DataTypes.CHAR(2),
     duree_id: DataTypes.BIGINT,
     special_id: DataTypes.BIGINT,
+    collection_id: DataTypes.BIGINT,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
   },

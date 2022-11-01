@@ -1,10 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../connexion");
 
-class Review extends Model {}
-
-Review.init(
-  {
+const Review = sequelize.define('reviews', {
     id: {
       primaryKey: true,
       type: DataTypes.INTEGER,

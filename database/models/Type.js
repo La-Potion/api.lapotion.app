@@ -1,10 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../connexion");
 
-class Type extends Model {}
-
-Type.init(
-  {
+const Type = sequelize.define('types', {
     type_ref: {
       primaryKey: true,
       type: DataTypes.CHAR(2),

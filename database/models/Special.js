@@ -1,11 +1,7 @@
-const { Model, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../connexion");
-const Carte = require("./Carte");
 
-class Special extends Model {}
-
-Special.init(
-  {
+const Special = sequelize.define('specials', {
     id: {
       primaryKey: true,
       type: DataTypes.BIGINT,
