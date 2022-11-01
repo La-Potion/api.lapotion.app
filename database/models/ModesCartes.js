@@ -3,6 +3,10 @@ const sequelize = require("../connexion");
 const Mode = require("./Mode");
 
 const ModeCarte = sequelize.define('mode_cartes', {
+      id: {
+          primaryKey: true,
+          type: DataTypes.INTEGER,
+      },
       carte_id: {
           type: DataTypes.INTEGER,
       },
